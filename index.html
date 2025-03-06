@@ -1,0 +1,898 @@
+<html>
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="style.css">
+	<title>CONCURSO PÚBLICO </title>
+	<link rel="icon" type="image/x-icon" href="">
+<br><br><br>
+    </div>
+	<body >
+		<br>
+        <div class="row">
+            <center>
+        <label for="prova-select">PROVA:</label>
+        <div class="col col-md-3">
+
+        <select name="provas" id="prova-select" class="form-control">
+            <option value="A">A</option>
+            <option value="B">B</option>
+        </select>
+    </center>
+    </div>
+    </div>
+		<div id="1" class="fc quadro form-control">
+            
+            <h4> RELATÓRIO DE CONCURSO PÚBLICO</h4>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="APROVADOS">APROVADOS</label>
+                    <input id="apv" class="form form-control focus" type="number" min="0">
+                </div>
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="REPROVADOS">REPROVADOS</label>
+                    <input id="rep" class="form form-control focus" type="number" min="0">
+                </div>
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="DESISTENTES">DESISTENTES</label>
+                    <input id="des" class="form form-control focus" type="number" min="0">
+                </div>
+                      <div class="col col-md-12">
+                    <label class="form-check-label" for="INICIO">INICIO</label>
+                    <input id="inicio" class="form form-control focus" required value="-03:00" type="time">
+                </div>
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="FIM">FIM</label>
+                    <input id="fim" class="form form-control focus" required value="-03:00" type="time">
+                </div>
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="TOTAL">TOTAL</label>
+                    <input type="text" id="total" style="pointer-events: none;" class="form form-control">
+                </div>
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="INSTRUTORES RESPONSÁVEIS: ">INSTRUTORES RESPONSÁVEIS: </label>
+                    <textarea id="insp" class="form form-control focus" required type="number" style="resize: none" rows='5' cols="10"> </textarea>
+                </div>
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="INSTRUTORES AUXILIARES: ">INSTRUTORES AUXILIARES: </label>
+                    <textarea id="ins" class="form form-control focus" required type="number" style="resize: none" rows='5' cols="10"></textarea>
+                </div> 
+            </div>
+            <br> <button class="btn btn-success" id="copy"> <i class="bi bi-clipboard"></i> Copiar</button>
+            <br> <button class="btn btn-danger" id="limparRe"> <i class="bi bi-trash"></i> Limpar</button>
+
+
+            <div class="alert alert-success" id="copiado" style="display: none;" role="alert">
+				Copiado com sucesso
+			</div>
+            <textarea rows="10" cols="50" style="resize: none; display: none;" readonly="true" maxlength="500" id="discord-text"></textarea>
+
+		</div>
+
+		<div id="2" class="fc quadro form-control">
+        <div class="prova-A" style="display: block;">
+
+            <h4>5 Códigos Quebec </h4>
+                <div class="row">
+                    <div class="col col-sm-5">
+                        </div>
+                    <div class="col col-md-3">
+                        CERTO
+                    </div>
+                    <div class="col col-md-3">
+                        ERRADO
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col col-md-6">
+                            <label class="form-check-label"> 1. QAP - Na Escuta</label>
+                        </div>
+                        <div class="col col-md-3">
+                            <input class="form form-check-input" id="soma[]" type="checkbox" id="1-qap"  name="prova" >
+                        </div>
+                        <div class="col col-md-3">
+                            <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                        </div> 
+                    </div>
+                <div class="row">
+                <div class="col col-md-6">
+                    <label class="form-check-label"> 2. QTI - A caminho</label>
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="soma[]" type="checkbox" id="2-qti"  name="prova" >
+                </div> 
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                </div> 
+                </div> 
+                <div class="row">
+
+                    <div class="col col-md-6">
+
+                        <label class="form-check-label"> 3. QRA - Identificação</label>
+                    </div>
+                    <div class="col col-md-3">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" id="3-qra"  name="prova" >
+                    </div>
+                    <div class="col col-md-3">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                    </div> 
+                </div>
+
+                <div class="row">
+
+                    <div class="col col-md-6">
+
+                        <label class="form-check-label"> 4. QRR - Apoio Terrestre</label>
+                    </div>
+                    <div class="col col-md-3">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" id="4-qrr"  name="prova" >
+                    </div>
+                    <div class="col col-md-3">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                    </div> 
+                </div>
+                <div class="row">
+
+                <div class="col col-md-6">
+
+                    <label class="form-check-label"> 5. QSV - Viatura</label>
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="soma[]" type="checkbox" id="5-qrv"  name="prova" >
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                </div> 
+                </div>
+                
+                <h4>Código 0 ao 5 ? </h4>
+                <div class="row">
+                    <div class="col col-sm-5">
+                        </div>
+                    <div class="col col-md-3">
+                        CERTO
+                    </div>
+                    <div class="col col-md-3">
+                        ERRADO
+                    </div>
+                </div>
+            <div class="row">
+            <div class="col col-md-6">
+                <label class="form-check-label" for="Código 0 ao 5 ?" title="Iniciando Patrulhamento">Código 0 </label>
+                 </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="Iniciando Patrulhamento">
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Iniciando Patrulhamento">
+                </div> 
+            </div>
+            <div class="row">
+            <div class="col col-md-6">
+                <label class="form-check-label" for="Código 0 ao 5 ?" title="Abordagem de Rotina">Código 1</label>
+            </div>
+                 <div class="col col-md-3">
+                <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="Abordagem de Rotina">
+                 </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Abordagem de Rotina">
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col col-md-6">
+                    <label class="form-check-label" for="Código 0 ao 5 ?" title="Abordagem Suspeita">Código 2 </label>
+                </div>
+                <div class="col col-md-3">
+                <input class="form form-check-input" id="soma[]" type="checkbox" name="prova"  title="Abordagem Suspeita">
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Abordagem Suspeita">
+                </div> 
+            </div>
+            <div class="row">
+            <div class="col col-md-6">
+                <label class="form-check-label" for="Código 0 ao 5 ?" title="Acompanhamento ou Fuga Limpa">Código 3</label>
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="soma[]" title="Acompanhamento ou Fuga Limpa" type="checkbox" name="prova" >
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="errado[]" title="Acompanhamento ou Fuga Limpa" type="checkbox"  name="prova-erro" >
+                </div> 
+            </div>
+            <div class="row">
+
+            <div class="col col-md-6">
+                <label class="form-check-label" for="Código 0 ao 5 ?" title="Força Não Letal">Código 4</label>
+            </div>
+            <div class="col col-md-3">
+                <input class="form form-check-input" id="soma[]" title="Força Não Letal" type="checkbox" name="prova" >
+            </div>
+            <div class="col col-md-3">
+                <input class="form form-check-input" id="errado[]" title="Força Não Letal" type="checkbox"  name="prova-erro" >
+            </div> 
+        </div>
+        <div class="row">
+
+            <div class="col col-md-6">
+                <label class="form-check-label" for="Código 0 ao 5 ?" title="Força Letal">Código 5</label>
+            </div>
+            <div class="col col-md-3">
+                <input class="form form-check-input" id="soma[]" title="Força Letal" type="checkbox" name="prova" >
+            </div>
+            <div class="col col-md-3">
+                <input class="form form-check-input" id="errado[]" title="Força Letal" type="checkbox"  name="prova-erro" >
+            </div>            </div>
+
+            <hr>
+            
+                   
+            <h4>Modulação</h4>
+            <div class="row">
+                    <div class="col col-md-12">
+                    <label class="form-check-label" for="Modulação" title="QAP central, iniciando acompanhamento a uma MECCA da cor roxa, QTH ta na rede!">"Você deu voz a uma MECA ROXA, e a mesma se recusou a parar, iniciando uma fuga"<br>
+                        - Module um código 3.</label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="QAP central, iniciando acompanhamento a uma MECCA da cor roxa, QTH ta na rede!"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="QAP central, iniciando acompanhamento a uma MECCA da cor roxa, QTH ta na rede!">
+                         <label> Incorreto</label>
+                    </div> 
+            </div> 
+            <hr>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Modulação" title="QAP central, liberando código 5 na MECCA ROXA, QRA 'Seu nome'. O mesmo atirou contra a guarnição">"Essa mesma MECA ROXA, após seu veículo quebrar, atirou contra a guarnição."
+                        <br>
+                        - Module um código 5.
+                        </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="QAP central, liberando código 5 na MECCA ROXA, QRA 'Seu nome'. O mesmo atirou contra a guarnição"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="QAP central, liberando código 5 na MECCA ROXA, QRA 'Seu nome'. O mesmo atirou contra a guarnição">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Modulação" title="QAP central, solicito QRR no meu QTH, indivíduos disparando contra a guarnição.">" Durante a ronda no perímetro, outros indivíduos apareceram no local efetuando disparos, ou seja, QRR inimigo. "
+                        <br>
+                        - Module solicitando apoio na rádio.
+                        </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="QAP central, solicito QRR no meu QTH, indivíduos disparando contra a guarnição."> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="QAP central, solicito QRR no meu QTH, indivíduos disparando contra a guarnição.">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+            <h4>Procedimento</h4>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="Solicitaria uma fox/steve na rádio, caso não houvesse realizaria o procedimento da caixinha">Como você realizaria uma abordagem a um individuo do sexo oposto?
+                        </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="Solicitaria uma fox/steve na rádio, caso não houvesse realizaria o procedimento da caixinha"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Solicitaria uma fox/steve na rádio, caso não houvesse realizaria o procedimento da caixinha">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+
+        </div>
+        <div class="prova-B" style="display: none;">
+
+            <h4>5 Códigos Quebec </h4>
+                <div class="row">
+                    <div class="col col-sm-5">
+                        </div>
+                    <div class="col col-md-3">
+                        CERTO
+                    </div>
+                    <div class="col col-md-3">
+                        ERRADO
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col col-md-6">
+                            <label class="form-check-label"> 1. QRV - A disposição</label>
+                        </div>
+                        <div class="col col-md-3">
+                            <input class="form form-check-input" id="soma[]" type="checkbox" id="1-qap"  name="prova" >
+                        </div>
+                        <div class="col col-md-3">
+                            <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                        </div> 
+                    </div>
+                <div class="row">
+                <div class="col col-md-6">
+                    <label class="form-check-label"> 2. QTH - Localização</label>
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="soma[]" type="checkbox" id="2-qti"  name="prova" >
+                </div> 
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                </div> 
+                </div> 
+                <div class="row">
+
+                    <div class="col col-md-6">
+
+                        <label class="form-check-label"> 3. QSJ - Dinheiro</label>
+                    </div>
+                    <div class="col col-md-3">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" id="3-qra"  name="prova" >
+                    </div>
+                    <div class="col col-md-3">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                    </div> 
+                </div>
+
+                <div class="row">
+
+                    <div class="col col-md-6">
+
+                        <label class="form-check-label"> 4. QSL - Entendido</label>
+                    </div>
+                    <div class="col col-md-3">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" id="4-qrr"  name="prova" >
+                    </div>
+                    <div class="col col-md-3">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                    </div> 
+                </div>
+                <div class="row">
+
+                <div class="col col-md-6">
+
+                    <label class="form-check-label"> 5. QSM - Repita a Mensagem</label>
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="soma[]" type="checkbox" id="5-qrv"  name="prova" >
+                </div>
+                <div class="col col-md-3">
+                    <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" >
+                </div> 
+                </div>
+                       
+                   
+            <h4>Modulação</h4>
+            <div class="row">
+                    <div class="col col-md-12">
+                    <label class="form-check-label" for="Modulação" title="QAP Central, QRA Fulano de Tal indo de QTX ou modulações similares.">Como você modularia na rádio para informar a sua corporação que você está saindo de serviço?
+
+                    </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="QAP Central, QRA Fulano de Tal indo de QTX ou modulações similares."> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="QAP Central, QRA Fulano de Tal indo de QTX ou modulações similares.">
+                         <label> Incorreto</label>
+                    </div> 
+            </div> 
+            <hr>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Modulação" title="Após 5 Minutos de Perseguição / Quando um cidadão é atropelado pelo meliante / Caso o mesmo solicite QRR / Passe 3x pelo mesmo local / Execute PowerGaming / Sofra um Acidente e não execute 'RP de Ferido' / Quando o mesmo recebe voz de desembarque 3x, está com o veículo PARADO e não apreende fuga ou acata a ordem.
+                    (Se for citado 3 exemplos, considerar como acerto)">Em quais ocasiões em que um Código 3 (Fuga Limpa) passa a ser um Código 4 (Fogo nos Pneus)?
+                        </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="Após 5 Minutos de Perseguição / Quando um cidadão é atropelado pelo meliante / Caso o mesmo solicite QRR / Passe 3x pelo mesmo local / Execute PowerGaming / Sofra um Acidente e não execute 'RP de Ferido' / Quando o mesmo recebe voz de desembarque 3x, está com o veículo PARADO e não apreende fuga ou acata a ordem.
+                        (Se for citado 3 exemplos, considerar como acerto)"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Após 5 Minutos de Perseguição / Quando um cidadão é atropelado pelo meliante / Caso o mesmo solicite QRR / Passe 3x pelo mesmo local / Execute PowerGaming / Sofra um Acidente e não execute 'RP de Ferido' / Quando o mesmo recebe voz de desembarque 3x, está com o veículo PARADO e não apreende fuga ou acata a ordem.
+                        (Se for citado 3 exemplos, considerar como acerto)">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Modulação" title="Não tem Limite">Quantas QSV's são permitidas em um Código 4?
+                        </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox" name="prova-erro" title="Não tem Limite"> 
+                        <label> A: 2 QSVs / 2 SEMOT's / 1 DOA</label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox" name="prova-erro" title="Não tem Limite"> 
+                        <label> B: 3 QSVs / 2 SEMOT's / 2 DOA's</label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox"  name="prova" title="Não tem Limite">
+                         <label> C: Não tem Limite</label>
+                    </div> 
+            </div>
+            <br>
+            <h4>Procedimento</h4>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="Manter uma distância segura, solicitar QRR na rádio para realizar a abordagem dos veículos suspeitos, e manter a corporação ciente da situação do local ou respostas similares">Você está em código 0 e avista um comboio de cinco veículos. Todos os veículos com pessoas mascaradas, equipadas com colete e coldre, porém, em sua QSV, há apenas três oficiais presentes.
+                        Qual procedimento correto a ser tomado de acordo com a situação?</label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="Manter uma distância segura, solicitar QRR na rádio para realizar a abordagem dos veículos suspeitos, e manter a corporação ciente da situação do local ou respostas similares"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Manter uma distância segura, solicitar QRR na rádio para realizar a abordagem dos veículos suspeitos, e manter a corporação ciente da situação do local ou respostas similares">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="Parar e prestar atendimento/suporte e dar QTA da perseguição.">
+                        Durante uma perseguição a um suspeito, caso você acabe atropelando um cidadão, o que deve ser feito?
+                    </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="Parar e prestar atendimento/suporte e dar QTA da perseguição."> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Parar e prestar atendimento/suporte e dar QTA da perseguição.">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="Solicitaria uma fox/steve na rádio, caso não houvesse realizaria o procedimento da caixinha">Como você realizaria uma abordagem a um individuo do sexo oposto?
+                        </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="Solicitaria uma fox/steve na rádio, caso não houvesse realizaria o procedimento da caixinha"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Solicitaria uma fox/steve na rádio, caso não houvesse realizaria o procedimento da caixinha">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-md-12">
+                <label class="form-check-label" for="Procedimento" title="QAP central, solicito uma FOX / um STIVE no meu QTH para realizar uma revista pessoal.">
+                    "Você realiza uma abordagem suspeita a um veículo insufilmado, ao se deparar com o condutor, identifica que o mesmo é do sexo oposto ao seu. "
+                    <br>
+                    -  Solicite na rádio um oficial (feminino/masculino) para realizar a abordagem.
+                </label>
+                </div>
+                <div class="col col-md-12">
+                    <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="QAP central, solicito uma FOX / um STIVE no meu QTH para realizar uma revista pessoal."> 
+                    <label> Correto</label>
+
+                </div>
+                <div class="col col-md-12">
+                    <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="QAP central, solicito uma FOX / um STIVE no meu QTH para realizar uma revista pessoal.">
+                     <label> Incorreto</label>
+                </div> 
+        </div>
+        <br>
+        </div>
+        </div>
+        <div id="3" class="fc quadro form-control">
+        <div id="prova-A" style="display: block;">
+
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="QAP central, solicito uma FOX / um STIVE no meu QTH para realizar uma revista pessoal.">
+                        "Você realiza uma abordagem suspeita a um veículo insufilmado, ao se deparar com o condutor, identifica que o mesmo é do sexo oposto ao seu. "
+                        <br>
+                        -  Solicite na rádio um oficial (feminino/masculino) para realizar a abordagem.
+                    </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="QAP central, solicito uma FOX / um STIVE no meu QTH para realizar uma revista pessoal."> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="QAP central, solicito uma FOX / um STIVE no meu QTH para realizar uma revista pessoal.">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="Cidadão, você está sendo preso pela Polícia Rodoviária Federal. O senhor tem o direito de permanecer calado e tudo o que disser poderá e será utilizado contra você no tribunal. Você tem direito a uma ligação monitorada e um advogado quando chegar no departamento da polícia. Compreende os seus direitos?">
+                        Cite o Aviso de Miranda.
+                    </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="Cidadão, você está sendo preso pela Polícia Rodoviária Federal. O senhor tem o direito de permanecer calado e tudo o que disser poderá e será utilizado contra você no tribunal. Você tem direito a uma ligação monitorada e um advogado quando chegar no departamento da polícia. Compreende os seus direitos?"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Cidadão, você está sendo preso pela Polícia Rodoviária Federal. O senhor tem o direito de permanecer calado e tudo o que disser poderá e será utilizado contra você no tribunal. Você tem direito a uma ligação monitorada e um advogado quando chegar no departamento da polícia. Compreende os seus direitos?">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="A Ética Militar deve ser compreendida como o conjunto de valores que levam o militar a ter um comportamento adequado ao seu status, devendo este agir balizado nos seguintes conceitos. (I) Sentimento do dever; (II) Honra Pessoal; (III) Pundonor Militar; (IV) Decoro da Classe">
+                    O que é ter conduta?
+                    </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="A Ética Militar deve ser compreendida como o conjunto de valores que levam o militar a ter um comportamento adequado ao seu status, devendo este agir balizado nos seguintes conceitos. (I) Sentimento do dever; (II) Honra Pessoal; (III) Pundonor Militar; (IV) Decoro da Classe"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="A Ética Militar deve ser compreendida como o conjunto de valores que levam o militar a ter um comportamento adequado ao seu status, devendo este agir balizado nos seguintes conceitos. (I) Sentimento do dever; (II) Honra Pessoal; (III) Pundonor Militar; (IV) Decoro da Classe">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            </div>
+            <br>
+        <div id="prova-B" style="display: none;">
+
+            
+            
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="QAP central, iniciando acompanhamento a uma X6 PRETA, a mesma não acatou a ordem de parada, QTH ta na rede!">
+                        "Você deu voz a uma X6 PRETA e a mesma se recusou a parar, iniciando uma fuga."
+                        <br>
+                        - Module um acompanhamento.
+                    </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="QAP central, iniciando acompanhamento a uma X6 PRETA, a mesma não acatou a ordem de parada, QTH ta na rede!"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="QAP central, iniciando acompanhamento a uma X6 PRETA, a mesma não acatou a ordem de parada, QTH ta na rede!">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="QAP Central, Código 5 liberado na minha QTH, indivíduos disparando contra a guarnição, QRA Fulano de Tal ou modulações similares">
+                        Você está perseguindo um Tesla Prior Cinza, no qual o Código 4 já está liberado, em seguida você cai em uma emboscada no Túnel do Zancudo e o QRR do Tesla iniciam disparos contra sua QSV. Após tal ato, o P1 consegue posicionar a QSV e em seguida você consegue ter a possibilidade de modular a situação na qual você se encontra na rádio.
+                        <br>
+                        - Module um código 5.
+                    </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="QAP Central, Código 5 liberado na minha QTH, indivíduos disparando contra a guarnição, QRA Fulano de Tal ou modulações similares"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="QAP Central, Código 5 liberado na minha QTH, indivíduos disparando contra a guarnição, QRA Fulano de Tal ou modulações similares">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="Cidadão, você está sendo preso pela Polícia Rodoviária Federal. O senhor tem o direito de permanecer calado e tudo o que disser poderá e será utilizado contra você no tribunal. Você tem direito a uma ligação monitorada e um advogado quando chegar no departamento da polícia. Compreende os seus direitos?">
+                        Cite o Aviso de Miranda.
+                    </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="Cidadão, você está sendo preso pela Polícia Rodoviária Federal. O senhor tem o direito de permanecer calado e tudo o que disser poderá e será utilizado contra você no tribunal. Você tem direito a uma ligação monitorada e um advogado quando chegar no departamento da polícia. Compreende os seus direitos?"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="Cidadão, você está sendo preso pela Polícia Rodoviária Federal. O senhor tem o direito de permanecer calado e tudo o que disser poderá e será utilizado contra você no tribunal. Você tem direito a uma ligação monitorada e um advogado quando chegar no departamento da polícia. Compreende os seus direitos?">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-md-12">
+                    <label class="form-check-label" for="Procedimento" title="A Ética Militar deve ser compreendida como o conjunto de valores que levam o militar a ter um comportamento adequado ao seu status, devendo este agir balizado nos seguintes conceitos. (I) Sentimento do dever; (II) Honra Pessoal; (III) Pundonor Militar; (IV) Decoro da Classe">
+                    O que é ter conduta?
+                    </label>
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="soma[]" type="checkbox" name="prova" title="A Ética Militar deve ser compreendida como o conjunto de valores que levam o militar a ter um comportamento adequado ao seu status, devendo este agir balizado nos seguintes conceitos. (I) Sentimento do dever; (II) Honra Pessoal; (III) Pundonor Militar; (IV) Decoro da Classe"> 
+                        <label> Correto</label>
+
+                    </div>
+                    <div class="col col-md-12">
+                        <input class="form form-check-input" id="errado[]" type="checkbox"  name="prova-erro" title="A Ética Militar deve ser compreendida como o conjunto de valores que levam o militar a ter um comportamento adequado ao seu status, devendo este agir balizado nos seguintes conceitos. (I) Sentimento do dever; (II) Honra Pessoal; (III) Pundonor Militar; (IV) Decoro da Classe">
+                         <label> Incorreto</label>
+                    </div> 
+            </div>
+            </div>
+            <br>
+            <div class="col col-md-12">
+                <label class="form-check-label" for="proc">RECRUTADOR: </label>
+                <input id="oficialnome" class="form form-control focus" type="text">
+            </div>
+            <div class="col col-md-12">
+                <label class="form-check-label" for="proc">NOME CONSCRITO: </label>
+                <input id="consnome" class="form form-control focus" type="text">
+            </div>
+            <div class="col col-md-12">
+                <label class="form-check-label" for="proc">RG CONSCRITO: </label>
+                <input id="rgcons" class="form form-control focus" type="text">
+            </div>
+            <hr>
+            <div class="col col-md-12">
+                
+                <label class="form-check-label" for="proc">ACERTOS: </label>
+                <input id="totalAcertos" class="form form-control focus" type="number" value="0" >
+                <label class="form-check-label" for="proc">ERROS: </label>
+                <input id="totalErros" class="form form-control focus" type="number" value="0" >
+                <label class="form-check-label" for="proc">PONTUAÇÃO FINAL:   </label>
+                <input id="totalT" class="form form-control focus" type="number" value="0" >
+            </div>
+            <div class="alert alert-success" id="copiado" style="display: none;" role="alert">
+				Copiado com sucesso
+			</div>
+            <div class="alert alert-success" id="apvB" style="display: none;" role="alert">
+				APROVADO
+			</div>
+            <div class="alert alert-warning" id="repB" style="display: none;" role="alert">
+				REPROVADO
+			</div>
+            <br> <button class="btn btn-success" id="copyC"> <i class="bi bi-clipboard"></i> Copiar</button>
+            <br> <button class="btn btn-danger" onclick="limpar()"> <i class="bi bi-trash"></i> Limpar</button>
+
+
+        </div>
+        </div>
+        
+
+
+	</body>
+</head>
+</html>
+<script
+		type="text/javascript">(function () { window['__CF$cv$params'] = { r: '6d4ede693a774cf7', m: 'c1hW1Rh0H4tuZl0wsr8lc_PxHochVPe94cU5za3H6pc-1643421646-0-AZgReWNppiCIufGN9b0SQAKCqRsLtHcwRgDjgAZ+Ebwly7w0zsT9G6XS1O/UzoI0KiHefNZG3S1S37LGPme9exr6Q+bETOtZoXvE80b2jTfbfvhbNPPCZOseNmfBmgNt6A/HEo8div1AtL5xdFuLfRozIq3iNLhezke9DJu8FQdEnFcZ+SAUTYcHVynGr69bHeJn9/0I1C6Z2kVFP5+t1xjmrXaI1cyd880XCyhvg3kG', s: [0xa3d3168605, 0xba02de72f3], } })();</script>
+	<script
+		type="text/javascript">(function () { window['__CF$cv$params'] = { r: '6d55320baf256030', m: 'ZIEu.pp.iZbUyq5KJvDLfjpPqMeOMxiNGM_gE_5Duyk-1643487986-0-AcUKQeDM0xlzizuzSCE1OWs4UCC/gTki/Wf/ptjXki9iQ5VGlYhrXoxDtlJyTdabd/omn/0PoOs+p2TFELZ2mXXA6xQBQ2b+78uInsszFfSZ930uS3lQhVc0pV+mm90Hi0ieWJJmSuym9EtYDi4CGxRFI1YKe+wVHyalMeXttvlzsYErYN8azcWTRNNeh5t9RbTkmCwQHWLPNxXvCr0wo0DuT9CtjXmfznyCLMi9IUpe', s: [0x6efed7905d, 0x60ab50310e], } })();</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+       
+        $('input[id^=soma]').change(function () {
+            let teste = 0;
+            var prova = document.getElementsByName('prova');
+			for (var i = 0; i < prova.length; i++) {
+                if (prova[i].checked){
+                    teste += 1
+                }
+                if (prova[i].value > 0 ) {
+                    teste += parseFloat(prova[i].value);
+                } 
+            }
+            $("#totalAcertos").val(teste)
+
+            $("#totalT").val(teste);
+        })
+       
+        $('input[id^=errado]').change(function () {
+            let teste = 0;
+            var prova = document.getElementsByName('prova-erro');
+			for (var i = 0; i < prova.length; i++) {
+                if (prova[i].checked){
+                    teste += 1
+                }
+                if (prova[i].value > 0 ) {
+                    teste += parseFloat(prova[i].value);
+                } 
+            }
+            $("#totalErros").val(teste)
+        })
+       
+        
+        $("#prova-select").change(function(){
+            if($(this).val() == "A"){
+                $(".prova-A")[0].style.display = "block";
+                $(".prova-B")[0].style.display = "none";
+                $("#prova-A")[0].style.display = "block";
+                $("#prova-B")[0].style.display = "none";
+                limpar()
+            } else{
+                $(".prova-A")[0].style.display = "none";
+                $(".prova-B")[0].style.display = "block";
+                $("#prova-A")[0].style.display = "none";
+                $("#prova-B")[0].style.display = "block";
+                limpar()
+
+            }
+        })
+
+
+        $("#limparRe").click(function(){
+            $("#cons").val("");
+            $("#apv").val("");
+            $("#rep").val("");
+            $("#des").val("");
+            $("#pres").val("");
+            $("#inicio").val("");
+            $("#fim").val("");
+            $("#total").val("");
+            $("#insp").val("");
+            $("#ins").val("");
+
+        })
+        function limpar(){
+            $("#oficialnome").val("");
+            $("#consnome").val("");
+            $("#rgcons").val("");
+            $("#totalT").val(0);
+            $("#totalAcertos").val(0);
+            $("#totalErros").val(0);
+            var prova = document.getElementsByName('prova');
+			for (var i = 0; i < prova.length; i++) {
+				prova[i].checked = false;
+			}
+            var provaE = document.getElementsByName('prova-erro');
+			for (var i = 0; i < provaE.length; i++) {
+				provaE[i].checked = false;
+			}
+        };
+        $("#copyC").click(function(){
+        let div = document.getElementById("discord-text");
+        let text = div.innerText;
+        let textArea = document.createElement("textarea");
+        textArea.width = '1px';
+        textArea.height = '1px';
+        textArea.background = 'transparents';
+        var status = ""
+        if($("#prova-select").val() == "A"){
+            if($("#totalT").val() >= 15){
+                    $("#apvB")[0].style.display = 'block';
+                    const timeOut = setTimeout(Aprovado, 3000);
+                    status = "Aprovado"
+                } else{
+                    status = "Reprovado"
+                    $("#repB")[0].style.display = 'block';
+                    const timeOut = setTimeout(Reprovado, 3000);
+            }
+                text = 
+                "\RECRUTADOR: " + $("#oficialnome").val()
+                +"\nNOME CONSCRITO: " + $("#consnome").val()
+                +"\nRG CONSCRITO: " + $("#rgcons").val()
+                +"\nNOTA CONSCRITO: " + $("#totalT").val() + "/18" + "(A)"
+                +"\nSTATUS: " + status
+        } else {                
+            if($("#totalT").val() >= 13){
+                $("#apvB")[0].style.display = 'block';
+			    const timeOut = setTimeout(Aprovado, 3000);
+                status = "Aprovado"
+            } else{
+                status = "Reprovado"
+                $("#repB")[0].style.display = 'block';
+			    const timeOut = setTimeout(Reprovado, 3000);
+            }
+                text = 
+                "\RECRUTADOR: " + $("#oficialnome").val()
+                +"\nNOME CONSCRITO: " + $("#consnome").val()
+                +"\nRG CONSCRITO: " + $("#rgcons").val()
+                +"\nNOTA CONSCRITO: " + $("#totalT").val() + "/16" + "(B)"
+                +"\nSTATUS: " + status
+            }
+
+            textArea.value = text;
+			document.body.append(textArea);
+
+			textArea.select();
+			document.execCommand("copy");
+			document.body.removeChild(textArea)
+        });
+        		$(document).ready(async function () {
+                    
+                    
+                });
+            $("#inicio").on("change", function (){
+                if(!$("#inicio").val()){
+                    alert("Informe o inicio")
+                } else{
+                    console.log($("#inicio").val())
+                }
+            })
+
+            $("#fim").on("change", function (){
+                var n = parseInt($("#inicio").val().split(':')[0])
+                var nM = parseInt($("#inicio").val().split(':')[1])
+                var f = parseInt($("#fim").val().split(':')[0]);
+                var fM = parseInt($("#fim").val().split(':')[1]);
+                var difference = f - n;            
+                var differenceM = fM - nM;
+                if (difference < 0) {
+                    difference = 24 + difference;
+                }
+                if (difference < 0) {
+                    differenceM = 60 + differenceM;
+                }
+                $("#total").val(difference+"h"+differenceM+"m")
+            })
+            let div = document.getElementById("discord-text");
+			let text = div.innerText;
+			let textArea = document.createElement("textarea");
+			textArea.width = '1px';
+			textArea.height = '1px';
+			textArea.background = 'transparents';
+            var today = new Date();
+			var mes = today.getMonth() + 1;
+            
+            $("#copy").click(function(){
+            let totalConscritos = parseInt($('#apv').val()) + parseInt($("#rep").val()) + parseInt($("#des").val())
+            text =
+            "\n INSTRUTORES RESPONSÁVEIS: " +$("#insp").val()
+			+"\n INSTRUTORES AUXILIARES: " +$("#ins").val()
+			+"\n CONSCRITOS: " + totalConscritos
+			+"\n APROVADOS: " + $('#apv').val()
+			+"\n REPROVADOS: "+ $("#rep").val()
+			+"\n DESISTENTES: " + $("#des").val()
+			+"\n DATA: "+ today.getDate() +"/0" + mes + "/" + today.getFullYear()
+			+"\n INICIO: " +$("#inicio").val()
+			+"\n FIM: " +$("#fim").val()
+			+"\n TOTAL: " +$("#total").val()
+			
+			
+			textArea.value = text;
+			document.body.append(textArea);
+
+			textArea.select();
+			document.execCommand("copy");
+			document.body.removeChild(textArea)
+            $("#copiado")[0].style.display = 'block';
+			const timeOut = setTimeout(tirarBloco, 3000);
+
+            });
+            function tirarBloco() {
+			$("#copiado")[0].style.display = 'none';
+		    }
+            function Aprovado() {
+			$("#apvB")[0].style.display = 'none';
+		    }
+            function Reprovado() {
+			$("#repB")[0].style.display = 'none';
+		    }
+</script>
